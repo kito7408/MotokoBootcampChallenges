@@ -21,7 +21,7 @@ let run = MoSpec.run;
 
 let studentTestProfile : Type.StudentProfile = {
   name = "Tester";
-  Team = "cozy-test";
+  team = "cozy-test";
   graduate = false;
 };
 let runnerPrincipal = Principal.fromText("wo5qg-ysjiq-5da");
@@ -73,7 +73,7 @@ let success = run([
         do {
           let newStudentProfile : Type.StudentProfile = {
             name = "Tester2";
-            Team = "other-team";
+            team = "other-team";
             graduate = false;
           };
           let response = await day5Actor.updateMyProfile(newStudentProfile);
